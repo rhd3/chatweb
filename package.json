@@ -1,0 +1,14 @@
+{
+  "name": "chatting",
+  "version": "1.0.0",
+  "description": "A chat application using Socket.io",
+  "main": "src/server/server.js",
+  "scripts": {
+    "start": "node src/server/server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.6.1"
+  }
+}
+
