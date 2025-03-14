@@ -1,17 +1,23 @@
 version: '3.8'
 
 services:
-  client:
-    build: ./client
+  frontend:
+    build:
+      context: .
+      dockerfile: src/client/Dockerfile
     ports:
       - "80:80"
     depends_on:
-      - server
+      - backend
 
-  server:
-    build: ./server
+  backend:
+    build:
+      context: .
+      dockerfile: src/server/Dockerfile
     ports:
       - "3000:3000"
+    env_file:
+      - ./src/server/.env
     depends_on:
       - db
 
