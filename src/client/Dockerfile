@@ -2,7 +2,7 @@ FROM node:18 AS builder
 WORKDIR /app
 
 # 패키지 설치
-COPY src/client/package.json src/client/package-lock.json ./
+COPY ./src/client/package.json ./src/client/package-lock.json ./
 RUN npm install
 
 # 프론트엔드 빌드
